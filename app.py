@@ -8,6 +8,12 @@ hide_streamlit_style = """
     footer {visibility: hidden;}
     header {visibility: hidden;}
     .stDeployButton {display:none;}
+    button[kind="header"] {display: none;}
+    .viewerBadge_container__1QSob {display: none;}
+    [data-testid="stDecoration"] {display: none;}
+    
+    /* Mantener visible el menú de 3 puntos */
+    #MainMenu {visibility: visible !important;}
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
