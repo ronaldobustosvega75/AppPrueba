@@ -3,6 +3,16 @@ from utils import process_files_and_generate_report, generate_ratios_charts_pdf
 import tempfile, os, shutil, re
 from style import load_styles, show_alert
 
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .stDeployButton {display:none;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Analizador Financiero SMV", layout="wide")
 load_styles()
 
